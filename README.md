@@ -3,7 +3,7 @@
 **Researcher / Data Scientist** — causal inference, representation learning, and time-series ML.  
 Paris, France · Email: **your.email@domain.com** · GitHub: https://github.com/mouad-eb
 
-**Links:** [About](/about/) · [CV](./assets/CV_Mouad_ElBouchattaoui.pdf) · [Google Scholar](PASTE_LINK) · [LinkedIn](PASTE_LINK) · [Twitter/X](optional) · [Calendly](optional)
+**Links:** [About](/about/) · [Blog](/blog/) · [CV](./assets/CV_Mouad_ElBouchattaoui.pdf) · [Google Scholar](PASTE_LINK) · [LinkedIn](PASTE_LINK) · [Twitter/X](optional) · [Calendly](optional)
 
 ---
 
