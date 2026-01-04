@@ -1,73 +1,39 @@
-# Mouad El Bouchattaoui (Mouad EB)
+# Mouad El Bouchattaoui
 
-**Researcher / Data Scientist** — causal inference, representation learning, and time-series ML.  
-Paris, France · Email: **your.email@domain.com** · GitHub: https://github.com/mouad-eb
+**Ph.D. in Applied Mathematics** · Machine Learning · Causal Inference
 
-**Links:** [About](/about/) · [Blog](/blog/) · [CV](./assets/CV_Mouad_ElBouchattaoui.pdf) · [Google Scholar](PASTE_LINK) · [LinkedIn](PASTE_LINK) · [Twitter/X](optional) · [Calendly](optional)
-
----
-
-## About
-I work on **causal machine learning** with an emphasis on **identifiability**, **uncertainty**, and **real-world deployment** for complex data (events + text + hierarchies + time).  
-PhD thesis: *“Learning causality with machine learning for the analysis and prediction of customer behavior.”*
+Paris, France
 
 ---
 
-## Research interests
-- Causal inference & treatment effects (especially sequential / longitudinal settings)
-- Causal representation learning and identifiability
-- Probabilistic modeling, uncertainty estimation, distribution shift
-- Time-series and event-driven modeling (industrial + healthcare + finance use-cases)
+I'm a researcher and data scientist interested in how we can make reliable decisions from observational data. My work focuses on causal inference, representation learning, and probabilistic modeling—particularly for longitudinal and time-series data.
+
+I completed my PhD at Paris-Saclay University, where I developed methods for counterfactual regression and treatment-effect estimation over time. My research has been published at NeurIPS, TMLR, and UAI.
+
+Currently, I work as a Senior Data Scientist at Saint-Gobain, building production ML systems for document analysis and predictive maintenance.
 
 ---
 
-## Selected work (papers / preprints)
-- **Paper title 1** — venue/year. [[pdf](LINK)] [[code](LINK)]
-- **Paper title 2** — venue/year. [[pdf](LINK)] [[code](LINK)]
-- **Paper title 3** — venue/year. [[pdf](LINK)] [[code](LINK)]
+## Selected Publications
 
-*(Tip: keep this to 3–6 items and link to Scholar for the full list.)*
-
----
-
-## Projects (featured)
-A strong portfolio section usually reads like a mini case study: **Problem → Approach → Result → Artifacts**. :contentReference[oaicite:1]{index=1}
-
-### 1) Causal Dynamic VAE (CDVAE) — Individual Treatment Effects with unobserved structure
-- **Problem:** estimate ITEs under hidden/static confounding in sequential data
-- **Approach:** probabilistic latent-variable modeling + identifiability-focused assumptions
-- **Result:** (add 1–2 quantitative highlights)
-- **Artifacts:** [[paper](LINK)] [[code](LINK)] [[slides](LINK)]
-
-### 2) Transparent latent structure via Jacobian geometry (module discovery)
-- **Problem:** recover interpretable latent modules driving groups of observed features
-- **Approach:** Jacobian-based geometry + clustering stability analysis
-- **Result:** (add key figure / metric)
-- **Artifacts:** [[paper](LINK)] [[code](LINK)] [[demo](LINK)]
-
-### 3) Industrial analytics: breakdown risk & root-cause reasoning (factory data)
-- **Problem:** early risk prediction + top suspected causes at notification time
-- **Approach:** event/time modeling + causal framing + robust evaluation
-- **Result:** (latency / lift / accuracy / operational value)
-- **Artifacts:** [[write-up](LINK)] [[code](LINK if public)]
+| Venue | Title |
+|-------|-------|
+| NeurIPS 2024 | [Causal Contrastive Learning for Counterfactual Regression Over Time](https://openreview.net/forum?id=bKOZYBJE4Z) |
+| TMLR 2025 | [Causal Dynamic Variational Autoencoder for Counterfactual Regression in Longitudinal Data](https://openreview.net/forum?id=atf9q49DeF) |
+| UAI 2024 | [Toward a More Transparent Causal Representation Learning](https://openreview.net/forum?id=dXwT6Dyo6z) |
 
 ---
 
-## Experience (short)
-- **Industrial Researcher / Data Scientist**, Saint-Gobain — causal/statistical modeling & decision support (YEAR–YEAR)
-- **Data Science Research (MSc project)**, L’Oréal Paris — time-series clustering, DTW augmentation, forecasting (ARIMA/SARIMA/LSTM/DeepAR)
+## Links
 
----
-
-## Open-source & reproducibility
-- Main repos: link your 3–6 best repositories.
-- Each project repo should have a clean README + “How to run” + environment info (this signals seriousness). :contentReference[oaicite:2]{index=2}
+- [About](/about)
+- [Blog](/blog)
+- [Google Scholar](https://scholar.google.com/citations?hl=fr&user=yH0gpPoAAAAJ)
+- [LinkedIn](https://www.linkedin.com/in/mouad-elbouchattaoui/)
+- [GitHub](https://github.com/mouad-eb)
 
 ---
 
 ## Contact
-- Email: **your.email@domain.com**
-- LinkedIn: PASTE_LINK
-- Google Scholar: PASTE_LINK
 
-_Last updated: YYYY-MM-DD_
+mouad.elbouchattaoui@gmail.com

@@ -1,47 +1,64 @@
 ---
-layout: default
+layout: page
 title: About
 permalink: /about/
 ---
 
-# About
+# About Me
 
-I’m **Mouad El Bouchattaoui (Mouad EB)**, a **researcher / data scientist** based in **Paris, France**.  
-My work focuses on **causal inference**, **representation learning**, and **machine learning for sequential / time-series data**, with an emphasis on **identifiability**, **uncertainty**, and **real-world deployment**.
+I'm a machine learning researcher and data scientist based in Paris, working at the intersection of causal inference, representation learning, and applied statistics.
 
-## Now
-- Finishing / recently finished a PhD on: *“Learning causality with machine learning for the analysis and prediction of customer behavior.”*
-- Building research + engineering projects around causal ML for complex industrial and sequential data.
-- Open to: Research Scientist / Applied Scientist / Senior DS roles (Paris / EU; adjust as needed).
+I hold a Ph.D. in Applied Mathematics from Paris-Saclay University, where my research focused on estimating treatment effects in longitudinal data. My dissertation, *Learning Causality for Longitudinal Data*, developed methods for counterfactual regression, identifiability in latent-variable models, and sequential decision optimization.
 
-## Research interests
-- Treatment effects & causal inference (especially longitudinal / sequential settings)
-- Causal representation learning, identifiability, latent structure
-- Probabilistic modeling, uncertainty estimation, distribution shift
-- Time-series + event-driven modeling (industry / healthcare / finance)
+Before the PhD, I studied applied mathematics at CentraleSupélec and Centrale Casablanca, with a focus on data science and research.
 
-## Education
-- **PhD, Applied Mathematics / Causal Machine Learning** — (Your university), (Year)
-  - Thesis: *Learning causality with machine learning for the analysis and prediction of customer behavior*
-- **MSc, (Your program)** — (Your university), (Year)
+---
 
-## Experience
-**Industrial Researcher / Data Scientist** — Saint-Gobain (Year–Present)  
-- Built and deployed causal/statistical models for decision support on complex operational data.
-- Designed robust evaluation protocols (uncertainty, sensitivity to seeds/bootstrapping, shift awareness).
-- Delivered end-to-end pipelines (data → modeling → stakeholder-facing outputs).
+## Research Interests
 
-**Data Science Research Project** — L’Oréal Paris (Year)  
-- Time-series feature engineering + clustering; augmentation via DTW; forecasting with ARIMA/SARIMA/LSTM/DeepAR.
-- (Add 1 bullet with a measurable outcome if you can.)
+- **Causal inference**: treatment-effect estimation, uplift modeling, dynamic treatment regimes
+- **Representation learning**: latent-variable models, identifiability, time-varying embeddings
+- **Probabilistic modeling**: Bayesian methods, variational inference, uncertainty quantification
+- **Applied ML**: predictive maintenance, forecasting, document understanding
 
-## Selected publications
-- **Paper 1 title** — Venue/Year. [[pdf](LINK)] [[code](LINK)]
-- **Paper 2 title** — Venue/Year. [[pdf](LINK)] [[code](LINK)]
-- Full list: [[Google Scholar](LINK)]
+---
+
+## Work
+
+I'm currently a Senior Data Scientist at Saint-Gobain, where I lead projects on LLM-based document analysis and Bayesian predictive maintenance. Previously, I conducted my industrial PhD at the same company, building causal ML systems for commercial targeting across longitudinal customer data.
+
+Before that, I interned at EDF Lab (time-series representation learning) and L'Oréal Paris (forecasting and clustering).
+
+---
+
+## Publications
+
+**NeurIPS 2024**  
+*Causal Contrastive Learning for Counterfactual Regression Over Time*  
+M. El Bouchattaoui, M. Tami, B. Lepetit, P.-H. Cournède  
+[OpenReview](https://openreview.net/forum?id=bKOZYBJE4Z)
+
+**TMLR 2025**  
+*Causal Dynamic Variational Autoencoder for Counterfactual Regression in Longitudinal Data*  
+M. El Bouchattaoui, M. Tami, B. Lepetit, P.-H. Cournède  
+[OpenReview](https://openreview.net/forum?id=atf9q49DeF)
+
+**UAI 2024 Workshop**  
+*Toward a More Transparent Causal Representation Learning*  
+M. El Bouchattaoui, M. Tami, B. Lepetit, P.-H. Cournède  
+[OpenReview](https://openreview.net/forum?id=dXwT6Dyo6z)
+
+---
+
+## Teaching
+
+I taught machine learning courses at CentraleSupélec from 2022 to 2024, covering supervised learning, ensemble methods, and semi-supervised techniques for master's students in the Data Science & Business Analytics program (joint with ESSEC).
+
+---
 
 ## Contact
-- Email: your.email@domain.com  
-- LinkedIn: LINK  
-- GitHub: LINK  
-- CV: [[PDF](./assets/CV_Mouad_ElBouchattaoui.pdf)]
+
+- Email: [mouad.elbouchattaoui@gmail.com](mailto:mouad.elbouchattaoui@gmail.com)
+- LinkedIn: [mouad-elbouchattaoui](https://www.linkedin.com/in/mouad-elbouchattaoui/)
+- GitHub: [mouad-eb](https://github.com/mouad-eb)
+- Google Scholar: [Profile](https://scholar.google.com/citations?hl=fr&user=yH0gpPoAAAAJ)
