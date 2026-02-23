@@ -30,6 +30,15 @@ Variational autoencoder for inferring unobserved risk factors from outcome seque
 
 ---
 
+### Market-Neutral Pairs Trading (Quant Stat-Arb)
+**Quant Research Side Project** · [Case Study](/projects/pairs-trading) · [Code](https://github.com/moad-lihoconf/ou_pair_trading)
+
+End-to-end stat-arb pipeline: hedge-ratio estimation, spread modeling via Ornstein-Uhlenbeck (OU) processes, and factor-neutralization. Includes robust screening for data-mining risk and walk-forward backtests with execution frictions.
+
+`quantitative-finance` `stochastic-processes` `stat-arb` `OU-process` `Python`
+
+---
+
 ## Industry
 
 ### LLM-Based Contract Compliance System
@@ -65,3 +74,22 @@ Unsupervised segmentation for commercial targeting. Reduced runtime by 85% and i
 Representation learning (VAE, GAN) for electricity consumption time series. Improved downstream classification by 5% over CNN/LSTM baselines.
 
 `representation-learning` `VAE` `GAN` `time-series` `PyTorch`
+---
+
+### Non-Linear Mixed-Effect Causal Modeling
+**JdS 2023** · [Paper](https://jds2023.sciencesconf.org/resource/page/id/19)
+
+Connecting unobserved risk factors in causal inference with unobserved heterogeneity in mixed-effects panel models. Leveraging deep non-linear mixed-effects modeling to estimate individual treatment effects over time.
+
+`causal-inference` `mixed-effects` `ITE` `longitudinal-data`
+
+---
+
+### Technical Notes & Theory
+**arXiv / Technical Reports**
+
+*   **Topological Residual Asymmetry**: Bivariate causal direction via random geometric graphs. [arXiv:2602.00427](https://arxiv.org/abs/2602.00427)
+*   **Random Walks in Random Environments**: Expository note on recurrence/localization and electrical-network analogies. [arXiv:2407.04758](https://arxiv.org/abs/2407.04758)
+*   **Meta-Learning & Representation Learning**: Formalizing structure-sharing across tasks for data-scarce adaptation. [arXiv:2407.04189](https://arxiv.org/abs/2407.04189)
+
+`theoretical-ml` `topology` `stochastic-processes` `meta-learning`
