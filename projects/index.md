@@ -13,7 +13,7 @@ Selected work spanning causal inference, deep learning, and applied ML systems.
 ## Research
 
 ### Causal Contrastive Learning for Counterfactual Regression
-**NeurIPS 2024** · [Paper](https://openreview.net/forum?id=bKOZYBJE4Z) · [Blog Post](/blog/causal-contrastive-learning)
+**NeurIPS 2024** · [Detailed Case Study](/projects/causal-contrastive-learning) · [Paper](https://openreview.net/forum?id=bKOZYBJE4Z)
 
 Counterfactual regression over long time horizons using contrastive objectives and information-theoretic regularization. Addresses selection bias in longitudinal observational data.
 
@@ -22,7 +22,7 @@ Counterfactual regression over long time horizons using contrastive objectives a
 ---
 
 ### Causal Dynamic VAE for Longitudinal Treatment Effects
-**TMLR 2025** · [Paper](https://openreview.net/forum?id=atf9q49DeF) · [Blog Post](/blog/causal-dvae)
+**TMLR 2025** · [Detailed Case Study](/projects/causal-dvae) · [Paper](https://openreview.net/forum?id=atf9q49DeF)
 
 Variational autoencoder for inferring unobserved risk factors from outcome sequences. Provides identifiability results and generalization bounds for individual treatment effect estimation.
 
@@ -42,7 +42,7 @@ End-to-end stat-arb pipeline: hedge-ratio estimation, spread modeling via Ornste
 ## Industry
 
 ### LLM-Based Contract Compliance System
-**Saint-Gobain, 2024–Present** · [Blog Post](/blog/llm-contract-compliance)
+**Saint-Gobain, 2024–Present** · [Detailed Case Study](/projects/llm-contract-compliance)
 
 RAG-based system for evidence-grounded checklist verification. Improved decision stability from ~10% to <1% variance across runs using hybrid similarity ranking and caching.
 
@@ -51,7 +51,7 @@ RAG-based system for evidence-grounded checklist verification. Improved decision
 ---
 
 ### Bayesian Predictive Maintenance
-**Saint-Gobain, 2024–Present** · [Blog Post](/blog/bayesian-maintenance)
+**Saint-Gobain, 2024–Present** · [Detailed Case Study](/projects/bayesian-maintenance)
 
 Failure-risk estimation using Pyro. Posterior uncertainty guides maintenance triage across 3 sites and 5 production lines.
 
@@ -60,7 +60,7 @@ Failure-risk estimation using Pyro. Posterior uncertainty guides maintenance tri
 ---
 
 ### Customer Segmentation Pipeline
-**Saint-Gobain, 2021** · [Blog Post](/blog/customer-segmentation)
+**Saint-Gobain, 2021**
 
 Unsupervised segmentation for commercial targeting. Reduced runtime by 85% and improved click-through by 40%.
 
@@ -69,7 +69,7 @@ Unsupervised segmentation for commercial targeting. Reduced runtime by 85% and i
 ---
 
 ### Time-Series Representation Learning
-**EDF Lab, 2020** · [Blog Post](/blog/time-series-representation)
+**EDF Lab, 2020**
 
 Representation learning (VAE, GAN) for electricity consumption time series. Improved downstream classification by 5% over CNN/LSTM baselines.
 
@@ -77,7 +77,7 @@ Representation learning (VAE, GAN) for electricity consumption time series. Impr
 ---
 
 ### Non-Linear Mixed-Effect Causal Modeling
-**JdS 2023** · [Paper](https://jds2023.sciencesconf.org/resource/page/id/19)
+**JdS 2023** · [Detailed Case Study](/projects/mixed-effect-causal) · [Paper](https://jds2023.sciencesconf.org/resource/page/id/19)
 
 Connecting unobserved risk factors in causal inference with unobserved heterogeneity in mixed-effects panel models. Leveraging deep non-linear mixed-effects modeling to estimate individual treatment effects over time.
 
