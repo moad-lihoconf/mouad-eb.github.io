@@ -4,61 +4,35 @@ title: About
 permalink: /about/
 ---
 
-# About Me
+# Mouad El Bouchattaoui
 
-I'm a machine learning researcher and data scientist based in Paris, working at the intersection of causal inference, representation learning, and applied statistics.
+I'm a researcher and data scientist working at the intersection of **Causal Inference**, **Representation Learning**, and **Applied Statistics**. I specialize in developing methods to make reliable decisions from high-dimensional, longitudinal data—whether in academic research or industrial production systems.
 
-I hold a Ph.D. in Applied Mathematics from Paris-Saclay University, where my research focused on estimating treatment effects in longitudinal data. My dissertation, *Learning Causality for Longitudinal Data*, developed methods for counterfactual regression, identifiability in latent-variable models, and sequential decision optimization.
+I hold a **Ph.D. in Applied Mathematics** from Paris-Saclay University. My dissertation, *Learning Causality for Longitudinal Data*, focused on counterfactual regression, identifiability in latent-variable models, and sequential decision optimization. My research has been published at premier venues like **NeurIPS**, **TMLR**, and **UAI**.
 
-Before the PhD, I studied applied mathematics at CentraleSupélec and Centrale Casablanca, with a focus on data science and research.
-
----
-
-## Research Interests
-
-- **Causal inference**: treatment-effect estimation, uplift modeling, dynamic treatment regimes
-- **Representation learning**: latent-variable models, identifiability, time-varying embeddings
-- **Probabilistic modeling**: Bayesian methods, variational inference, uncertainty quantification
-- **Applied ML**: predictive maintenance, forecasting, document understanding
+Currently, I am a **Senior Data Scientist at Saint-Gobain**, where I lead applied-ML projects with an emphasis on evaluation rigor and decision stability. My work ranges from building Bayesian predictive maintenance pipelines to developing retrieval-grounded LLM systems for contract compliance.
 
 ---
 
-## Work
+## Technical Focus
 
-I'm currently a Senior Data Scientist at Saint-Gobain, where I lead projects on LLM-based document analysis and Bayesian predictive maintenance. Previously, I conducted my industrial PhD at the same company, building causal ML systems for commercial targeting across longitudinal customer data.
-
-Before that, I interned at EDF Lab (time-series representation learning) and L'Oréal Paris (forecasting and clustering).
-
----
-
-## Publications
-
-**NeurIPS 2024**  
-*Causal Contrastive Learning for Counterfactual Regression Over Time*  
-M. El Bouchattaoui, M. Tami, B. Lepetit, P.-H. Cournède  
-[OpenReview](https://openreview.net/forum?id=bKOZYBJE4Z)
-
-**TMLR 2025**  
-*Causal Dynamic Variational Autoencoder for Counterfactual Regression in Longitudinal Data*  
-M. El Bouchattaoui, M. Tami, B. Lepetit, P.-H. Cournède  
-[OpenReview](https://openreview.net/forum?id=atf9q49DeF)
-
-**UAI 2024 Workshop**  
-*Toward a More Transparent Causal Representation Learning*  
-M. El Bouchattaoui, M. Tami, B. Lepetit, P.-H. Cournède  
-[OpenReview](https://openreview.net/forum?id=dXwT6Dyo6z)
+- **Causal Inference**: Counterfactual estimation, uplift modeling, and offline policy learning.
+- **Probabilistic Modeling**: Latent-variable models (VAEs/GANs), Bayesian inference, and event-time hazard modeling.
+- **Representation Learning**: Self-supervised sequence modeling and identifiable representation learning for time-series.
+- **ML Engineering**: Building scalable, production-grade pipelines with focus on robustness and reproducibility.
 
 ---
 
-## Teaching
+## Background
 
-I taught machine learning courses at CentraleSupélec from 2022 to 2024, covering supervised learning, ensemble methods, and semi-supervised techniques for master's students in the Data Science & Business Analytics program (joint with ESSEC).
+Before my PhD, I studied applied mathematics at **CentraleSupélec** and **Centrale Casablanca**, graduating in 2021. My journey has taken me from the theoretical foundations of stochastic processes to shipping production models that impact real-world business decisions.
 
 ---
 
-## Contact
+## Contact & Links
 
-- Email: [mouad.elbouchattaoui@gmail.com](mailto:mouad.elbouchattaoui@gmail.com)
-- LinkedIn: [mouad-elbouchattaoui](https://www.linkedin.com/in/mouad-elbouchattaoui/)
-- GitHub: [mouad-eb](https://github.com/mouad-eb)
-- Google Scholar: [Profile](https://scholar.google.com/citations?hl=fr&user=yH0gpPoAAAAJ)
+- **Professional Timeline: [Experience]({{ '/experience/' | relative_url }})**
+- **Research Hub: [Publications & Talks]({{ '/research/' | relative_url }})**
+- **Detailed Toolkit: [Skills]({{ '/skills/' | relative_url }})**
+- **Email**: [mouad.elbouchattaoui@gmail.com](mailto:mouad.elbouchattaoui@gmail.com)
+- **Profiles**: [LinkedIn](https://www.linkedin.com/in/mouad-elbouchattaoui/) · [GitHub](https://github.com/mouad-eb) · [Scholar](https://scholar.google.com/citations?hl=fr&user=yH0gpPoAAAAJ)

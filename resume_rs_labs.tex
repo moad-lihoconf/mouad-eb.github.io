@@ -1,0 +1,282 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.6in, top=0.55in, bottom=0.55in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{parskip}
+
+% Colors
+\definecolor{primarycolor}{RGB}{0, 51, 102}
+\definecolor{linkcolor}{RGB}{0, 82, 155}
+\definecolor{darkgray}{RGB}{55, 55, 55}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    pdfauthor={Mouad El Bouchattaoui},
+    pdftitle={Mouad El Bouchattaoui - Academic CV}
+}
+
+% Section formatting - clean line underneath
+\titleformat{\section}
+    {\large\bfseries\color{primarycolor}\scshape}
+    {}
+    {0em}
+    {}
+    [\vspace{-0.5em}\textcolor{primarycolor}{\rule{\textwidth}{0.8pt}}]
+
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Custom bullet style - consistent filled circles
+\setlist[itemize,1]{label=\textcolor{darkgray}{\textbullet}, leftmargin=15pt, itemsep=1pt, parsep=0pt, topsep=2pt}
+\setlist[itemize,2]{label=\textcolor{darkgray}{\textbullet}, leftmargin=13pt, itemsep=1pt, parsep=0pt, topsep=1pt}
+
+% Custom commands
+\newcommand{\resumeSubheading}[4]{
+    \vspace{5pt}
+    \begin{tabularx}{\textwidth}{@{}X r@{}}
+        \textbf{\large #1} & \textbf{#2} \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabularx}
+    \vspace{1pt}
+}
+
+\newcommand{\publicationEntry}[4]{
+    \vspace{4pt}
+    \noindent\textbf{#1} \hfill \textbf{#2} \\
+    \textit{#3} \\
+    {\small #4}
+    \vspace{2pt}
+}
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    {\Huge\bfseries\color{primarycolor} Mouad El Bouchattaoui} \\[5pt]
+    {\large\color{darkgray} Ph.D. in Applied Mathematics \;|\; Machine Learning and Causal Inference} \\[6pt]
+    {\small\color{darkgray}
+    \textbf{Research focus:} causal inference; treatment-effect estimation; latent-variable models; identifiability; causal representation learning; longitudinal and panel data; probabilistic modeling.
+    }\\[6pt]
+    {\small
+    +33\,7\,55\,09\,28\,11 \;\;$\vert$\;\;
+    \href{mailto:mouad.elbouchattaoui@gmail.com}{mouad.elbouchattaoui@gmail.com} \;\; $\bullet$ \;\;
+    Paris Area, France \\[4pt]
+    \href{https://www.linkedin.com/in/mouad-elbouchattaoui/}{LinkedIn}
+    \;\; $\bullet$ \;\;
+    \href{https://github.com/moad-lihoconf}{GitHub}
+    \;\; $\bullet$ \;\;
+    \href{https://scholar.google.com/citations?hl=fr&user=yH0gpPoAAAAJ}{Google Scholar}
+    }
+\end{center}
+
+\vspace{-6pt}
+
+%----------EDUCATION----------
+\section{Education}
+\resumeSubheading
+    {Paris-Saclay University}{Paris-Saclay, France}
+    {Ph.D. in Applied Mathematics (defended Nov.\ 2025)}{09/2021 -- 11/2025}
+\begin{itemize}
+    \item Dissertation: \textit{Learning causality for longitudinal data} (\href{https://arxiv.org/abs/2512.04980}{arXiv:2512.04980}).
+\end{itemize}
+
+\resumeSubheading
+    {CentraleSup\'elec}{Paris-Saclay, France}
+    {Engineering/Master's degree in Applied Mathematics}{09/2019 -- 11/2021}
+\begin{itemize}
+    \item Major in Data Science (research track).
+\end{itemize}
+
+\resumeSubheading
+    {Centrale Casablanca}{Casablanca, Morocco}
+    {Undergraduate Studies}{09/2017 -- 08/2019}
+\begin{itemize}
+    \item General engineering curriculum; research-focused track in mathematics.
+\end{itemize}
+
+%----------PUBLICATIONS----------
+\section{Publications}
+
+\publicationEntry{NeurIPS 2024}{\href{https://openreview.net/forum?id=bKOZYBJE4Z}{OpenReview}}{Causal Contrastive Learning for Counterfactual Regression Over Time}{Bouchattaoui, M. E., Tami, M., Lepetit, B., \& Courn\`ede, P. H.}
+
+We address counterfactual regression over long time horizons while maintaining computational efficiency. Our approach leverages contrastive regularization and information-theoretic principles to capture long-term dependencies, mitigate selection bias in longitudinal data, and enable fast test-time inference.
+
+\vspace{6pt}
+
+\publicationEntry{TMLR 2025}{\href{https://openreview.net/forum?id=atf9q49DeF}{OpenReview}}{Causal Dynamic Variational Autoencoder for Counterfactual Regression in Longitudinal Data}{Bouchattaoui, M. E., Tami, M., Lepetit, B., \& Courn\`ede, P. H.}
+
+We introduce CDVAE to infer unobserved risk factors affecting outcome sequences. CDVAE provides identifiability results and generalization bounds for individual treatment-effect estimation, with strong empirical performance on synthetic and real-world datasets.
+
+\vspace{6pt}
+
+\publicationEntry{Causal@UAI 2024 (Workshop Poster)}{\href{https://openreview.net/forum?id=dXwT6Dyo6z}{OpenReview}}{Toward a More Transparent Causal Representation Learning}{Bouchattaoui, M. E., Tami, M., Lepetit, B., \& Courn\`ede, P.-H.}
+
+This work studies transparency and interpretability of learned causal factors in high-dimensional, time-varying data via structural sparsity in generative functions. We introduce a sparse subspace clustering technique based on decoder Jacobians to trace relationships between latent variables and observed features.
+
+\vspace{6pt}
+
+\publicationEntry{French Statistical Society (JdS) --- 54th Annual Meeting}{\href{https://jds2023.sciencesconf.org/resource/page/id/19}{Paper}}{A Non-Linear Mixed-Effect Model for the Estimation of Causal Effects Through Time}{Bouchattaoui, M. E., Tami, M., Lepetit, B., \& Courn\`ede, P.-H.}
+
+We connect unobserved risk factors in causal inference with unobserved heterogeneity in mixed-effects panel models, leveraging deep non-linear mixed-effects modeling to estimate individual treatment effects over time.
+
+%----------PREPRINTS----------
+\section{Preprints (Technical Notes)}
+
+\publicationEntry{arXiv}{\href{https://arxiv.org/abs/2407.04758}{arXiv:2407.04758}}{Random Walks in Random Environments: A Short Introduction}{Bouchattaoui, M. E.}
+
+Expository note on random walks in random environments (RWRE), covering recurrence/localization and the electrical-network analogy, with brief applications.
+
+\vspace{6pt}
+
+\publicationEntry{arXiv}{\href{https://arxiv.org/abs/2407.04189}{arXiv:2407.04189}}{Meta-Learning and Representation Learning: A Short Theoretical Note}{Bouchattaoui, M. E.}
+
+Short theoretical note formalizing meta-learning as leveraging shared structure across tasks for data-scarce adaptation.
+
+%----------COLLOQUIA AND PRESENTATIONS----------
+\section{Colloquia and Presentations}
+\resumeSubheading
+    {Research Seminar on Causal Representation Learning, IBM Research}{Paris-Saclay, France}
+    {Toward Transparent Causal Representation Learning}{2025}
+
+\resumeSubheading
+    {Causality Reading Group, Department of Computer Science, University of Pisa}{Pisa, Italy}
+    {Causal Contrastive Learning for Counterfactual Regression Over Time}{2025}
+
+\resumeSubheading
+    {NeurIPS@Paris 2024}{Paris, France}
+    {Causal Contrastive Learning for Counterfactual Regression Over Time \href{https://neuripsinparis.github.io/neurips2024paris/}{(link)}}{12/2024}
+
+\resumeSubheading
+    {Workshop on \textit{Mathematical Foundations of AI} (4th edition)}{Paris, France}
+    {Random Effects in Longitudinal Data Through the Lens of Causal Inference \href{https://www.dataia.eu/en/events/workshop-mathematical-foundations-ai-4th-edition}{(link)}}{09/2024}
+
+\resumeSubheading
+    {Quarter on Causality Colloquium}{Paris \& Grenoble, France}
+    {CDVAE: Estimating Causal Effects Over Time Under Unobserved Adjustment Variables \href{https://quarter-on-causality.github.io/analysis}{(link)}}{2023}
+
+%----------AWARDS----------
+\section{Awards}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{Excellence Scholarship from the French Embassy} & 2019--2020 \\
+    \multicolumn{2}{@{}l@{}}{\small Double Engineering Degree Program} \\[6pt]
+    \textbf{First rank at Kaggle Challenge (Dreem startup, Paris)} & 2020 \\
+    \multicolumn{2}{@{}l@{}}{\small Classification of sleep stages from brain signals} \\
+\end{tabularx}
+
+%----------TEACHING EXPERIENCE----------
+\section{Teaching Experience}
+\resumeSubheading
+{CentraleSup\'elec, Paris-Saclay University}{Paris-Saclay, France}
+{Assistant Teaching Professor}{2022 -- 2024}
+\begin{itemize}
+    \item Taught and led lab/tutorial sessions for master's-level students across multiple programs, including the \textit{Master in Data Science \& Business Analytics} (ESSEC / CentraleSup\'elec) and engineering master's programs at CentraleSup\'elec.
+    \item Led lab/tutorial sessions for master's courses \textit{Introduction to Machine Learning} and \textit{Ensemble Learning}: dimensionality reduction; supervised learning; bagging; random forests; boosting; unsupervised and semi-supervised learning.
+    \item Delivered a guest lecture on \textit{Introduction to Causality}, presenting core causal-inference concepts.
+    \item Graded exams and served on project juries, assessing student work and providing detailed feedback.
+\end{itemize}
+
+%----------MENTORSHIP AND EXTRACURRICULAR ACTIVITIES----------
+\section{Mentorship and Extracurricular Activities}
+
+\resumeSubheading
+    {CentraleSup\'elec --- MICS Lab}{Paris-Saclay, France}
+    {Research Internship Mentor}{2024}
+\begin{itemize}
+    \item Mentored Malek Ben Salah (\'Ecole Polytechnique / ENSTA) on \textit{individual treatment-effect estimation for sequences of treatments} in metastatic breast cancer.
+\end{itemize}
+
+\resumeSubheading
+    {Study Week on Causal Inference for Industry}{\href{https://quarter-on-causality.github.io/seme/\#program}{Program link}}
+    {Participant \& Mentor --- Causal Discovery Hackathon}{2023}
+\begin{itemize}
+    \item Proposed and helped design a causal discovery challenge using real transactional data from Saint-Gobain.
+    \item Mentored participating teams during the hackathon, advising on causal discovery framing, assumptions, and evaluation.
+\end{itemize}
+
+\resumeSubheading
+    {Saint-Gobain}{Paris-La D\'efense, France}
+    {Co-supervisor, Master's thesis}{2022}
+\begin{itemize}
+    \item Co-supervised Wiam Adnan (\'Ecole Centrale Marseille) on \textit{statistical impact estimation of marketing campaigns}.
+\end{itemize}
+
+%----------INDUSTRIAL RESEARCH EXPERIENCE----------
+\section{Industrial Research Experience}
+
+\begin{itemize}[leftmargin=0pt, label={}]
+
+    \item[]
+    \resumeSubheading
+        {Saint-Gobain}{Paris-La D\'efense}
+        {Senior Data Scientist}{12/2024 -- Present}
+
+    \begin{itemize}
+        \item Led two applied-ML projects with an emphasis on evaluation rigor and decision stability: (i) LLM-based document compliance, (ii) Bayesian predictive maintenance and root-cause analysis.
+        \item \textbf{LLM-based contract compliance.} Built clause-level representations and retrieval-based evidence linking (PostgreSQL/pgvector) for grounded checklist verification; improved checklist-to-evidence stability from \textbf{$\sim$10\%} to \textbf{<1\%} across reruns via hybrid similarity tie-breaking (semantic + TF--IDF) and caching.
+        \item \textbf{Predictive maintenance \& RCA.} Harmonized machine stops, quality/scrap metrics, and maintenance logs into a validated RCA dataset across \textbf{3 sites / 5 lines} with \textbf{98\%} cross-warehouse matching; trained Bayesian failure-risk models in Pyro and evaluated calibration and top-$k$ triage on historical incidents.
+        \item \textit{Selected tools:} Python, SQL (PostgreSQL/pgvector, Snowflake), FastAPI, PyTorch/Pyro.
+    \end{itemize}
+
+    \item[]
+    \resumeSubheading
+        {Saint-Gobain}{Paris-La D\'efense}
+        {Industrial PhD Researcher (Causal Inference / ML)}{09/2021 -- 12/2024}
+
+    \begin{itemize}
+        \item Industrial PhD on causal inference and sequential decisioning for commercial targeting on longitudinal customer data; resulted in publications at \textbf{NeurIPS} and \textbf{TMLR} and a workshop poster at \textbf{UAI} (see Publications).
+        \item \textbf{Uplift / ITE.} Built causal uplift pipelines for engagement outcomes across \textbf{100+ campaigns}; developed neural embeddings for a \textbf{100K+}-dimensional customer panel, reducing processing time by \textbf{25\%}.
+        \item \textbf{Sequential decision optimization.} Designed a sequential causal policy-learning framework to recommend multi-week action sequences using counterfactual outcome trajectories; transferred personalized recommendations to \textbf{100+ sales engineers} via decision-support tooling.
+        \item \textbf{Causal representation learning.} Learned time-varying embeddings from longitudinal purchases (\textbf{1M+ transactions}) to capture evolving customer state and heterogeneity; packaged artifacts for reuse in segmentation and forecasting.
+        \item \textit{Selected tools:} PyTorch/Lightning, EconML/DoubleML, MLflow, Hydra, Optuna.
+    \end{itemize}
+
+    \item[]
+    \resumeSubheading
+        {Saint-Gobain}{Paris-La D\'efense}
+        {Data Scientist (Segmentation \& Targeting)}{04/2021 -- 08/2021}
+
+    \begin{itemize}
+        \item Built an unsupervised segmentation pipeline for commercial targeting (feature engineering + feature selection + clustering).
+        \item Reduced end-to-end pipeline runtime by \textbf{85\%} and improved downstream engagement by \textbf{40\%} (click-through).
+        \item Validated segment stability using distributional diagnostics (KDE, Wasserstein distance) and low-dimensional structure (UMAP).
+    \end{itemize}
+
+    \item[]
+    \resumeSubheading
+        {EDF Lab}{Paris-Saclay}
+        {Research Intern (Time Series Representation Learning)}{05/2020 -- 11/2020}
+
+    \begin{itemize}
+        \item Developed representation learning models (AEs, VAEs, GANs) for electricity-consumption time series, improving downstream classification accuracy by \textbf{5\%} over baselines (CNN/LSTM).
+        \item Optimized architectures and data pipelines, achieving \textbf{10$\times$} runtime reduction.
+        \item Benchmarked deep and classical baselines to quantify accuracy--compute trade-offs.
+    \end{itemize}
+
+    \item[]
+    \resumeSubheading
+        {L'Or\'eal Paris}{Paris}
+        {Research Intern (Time Series Analysis \& Forecasting)}{10/2019 -- 03/2020}
+
+    \begin{itemize}
+        \item Established a baseline to assess whether product-to-tester transformations are predictable versus chaotic.
+        \item Engineered time-series features (tsfresh) and behavior-based clustering to uncover recurring patterns across SKUs.
+        \item Compared forecasting and similarity approaches (ARIMA/SARIMA, LSTM, DeepAR, DTW) and delivered recommendations for operational forecasting.
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+

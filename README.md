@@ -27,6 +27,10 @@ Currently, I work as a Senior Data Scientist at Saint-Gobain, building productio
 ## Links
 
 - [About](/about)
+- [Experience](/experience)
+- [Research](/research)
+- [Skills](/skills)
+- [Projects](/projects)
 - [Blog](/blog)
 - [Google Scholar](https://scholar.google.com/citations?hl=fr&user=yH0gpPoAAAAJ)
 - [LinkedIn](https://www.linkedin.com/in/mouad-elbouchattaoui/)

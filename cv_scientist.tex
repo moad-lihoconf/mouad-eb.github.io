@@ -1,0 +1,201 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.6in, top=0.35in, bottom=0.55in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{parskip}
+
+% Colors
+\definecolor{primarycolor}{RGB}{0, 51, 102}
+\definecolor{linkcolor}{RGB}{0, 82, 155}
+\definecolor{darkgray}{RGB}{55, 55, 55}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    pdfauthor={Mouad El Bouchattaoui},
+    pdftitle={Mouad El Bouchattaoui - Academic CV}
+}
+
+% Section formatting - clean line underneath
+\titleformat{\section}
+    {\large\bfseries\color{primarycolor}\scshape}
+    {}
+    {0em}
+    {}
+    [\vspace{-0.5em}\textcolor{primarycolor}{\rule{\textwidth}{0.8pt}}]
+
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Custom bullet style - consistent filled circles
+\setlist[itemize,1]{label=\textcolor{darkgray}{\textbullet}, leftmargin=15pt, itemsep=1pt, parsep=0pt, topsep=2pt}
+\setlist[itemize,2]{label=\textcolor{darkgray}{\textbullet}, leftmargin=13pt, itemsep=1pt, parsep=0pt, topsep=1pt}
+
+% Custom commands
+\newcommand{\resumeSubheading}[4]{
+    \vspace{5pt}
+    \begin{tabularx}{\textwidth}{@{}X r@{}}
+        \textbf{\large #1} & \textbf{#2} \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabularx}
+    \vspace{1pt}
+}
+
+\newcommand{\publicationEntry}[4]{
+    \vspace{4pt}
+    \noindent\textbf{#1} \hfill \textbf{#2} \\
+    \textit{#3} \\
+    {\small #4}
+    \vspace{2pt}
+}
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    {\Huge\bfseries\color{primarycolor} Mouad El Bouchattaoui} \\[5pt]
+    {\large\color{darkgray} Ph.D. in Applied Mathematics \;|\; Machine Learning and Causal Inference} \\[6pt]
+    {\small\color{darkgray}
+    \textbf{Research focus:} causal inference; treatment-effect estimation; latent-variable models; identifiability; causal representation learning; longitudinal and panel data; probabilistic modeling.
+    }\\[6pt]
+    {\small
+    +33\,7\,55\,09\,28\,11 \;\;$\vert$\;\;
+    \href{mailto:mouad.elbouchattaoui@gmail.com}{mouad.elbouchattaoui@gmail.com} \;\; $\bullet$ \;\;
+    Paris Area, France \\[4pt]
+    \href{https://www.linkedin.com/in/mouad-elbouchattaoui/}{LinkedIn}
+    \;\; $\bullet$ \;\;
+    \href{https://github.com/moad-lihoconf}{GitHub}
+    \;\; $\bullet$ \;\;
+    \href{https://scholar.google.com/citations?hl=fr&user=yH0gpPoAAAAJ}{Google Scholar}
+    }
+\end{center}
+
+\vspace{-6pt}
+
+
+%----------PUBLICATIONS----------
+\section{Selected Publications (First-author)}
+
+\publicationEntry{NeurIPS 2024}{\href{https://openreview.net/forum?id=bKOZYBJE4Z}{OpenReview}}{Causal Contrastive Learning for Counterfactual Regression Over Time}{Bouchattaoui, M. E., Tami, M., Lepetit, B., \& Courn\`ede, P. H.} Counterfactual regression over long horizons with efficient inference, using contrastive information-theoretic regularization to capture long-term dependencies and reduce longitudinal selection bias.
+
+\vspace{2pt}
+
+\publicationEntry{TMLR 2025}{\href{https://openreview.net/forum?id=atf9q49DeF}{OpenReview}}{Causal Dynamic Variational Autoencoder for Counterfactual Regression in Longitudinal Data}{Bouchattaoui, M. E., Tami, M., Lepetit, B., \& Courn\`ede, P. H.} CDVAE infers unobserved risk factors driving outcome sequences and provides identifiability + generalization guarantees for individual treatment-effect estimation, with strong results on synthetic and real data.
+
+\vspace{2pt}
+
+\publicationEntry{Causal@UAI 2024 (Workshop Poster)}{\href{https://openreview.net/forum?id=dXwT6Dyo6z}{OpenReview}}{Toward a More Transparent Causal Representation Learning}{Bouchattaoui, M. E., Tami, M., Lepetit, B., \& Courn\`ede, P.-H.} Transparency for time-varying causal factors via structural sparsity: sparse subspace clustering on decoder Jacobians to link latent variables to observed features.
+
+% %----------PREPRINTS----------
+% \section{Working papers}
+
+% \publicationEntry{Under Review at ICML 2026}{\href{https://arxiv.org/abs/2602.00427}{arXiv:2602.00427}}{Topological Residual Asymmetry for Bivariate Causal Direction}{Bouchattaoui, M. E.} Topological Residual Asymmetry (TRA) detects causal direction from regressor--residual point clouds using random geometric graphs and $0$-dim persistent homology, with principled abstention under confounding; includes consistency, finite-sample calibration, and extensive synthetic/real experiments.
+
+
+%----------INDUSTRIAL RESEARCH EXPERIENCE----------
+\section{Industrial Research Experience}
+
+\begin{itemize}[leftmargin=0pt, label={}]
+
+    \item[]
+    \resumeSubheading
+        {Saint-Gobain}{Paris-La D\'efense}
+        {Senior Data Scientist}{12/2024 -- Present}
+        \begin{itemize}
+        \item \textbf{Predictive maintenance (Bayesian risk modeling + root-cause analysis).} Built an end-to-end failure-risk pipeline using Poisson/Cox-style event intensities on asset-day exposure to produce calibrated failure probabilities.
+        \item Developed sensor-driven root-cause analysis to localize failure drivers and heterogeneity across plant, line, workcenter, and equipment, using mixed effects modeling.
+        \item Built a leakage-safe, censoring-aware at-risk dataset by unifying stops, scrap KPIs, work orders, and sensor streams across \textbf{3 plants/5 lines} with \textbf{98\%} entity matching + automated QA/lineage.
+ \      \item \textit{Stack:} Python, PyTorch/Pyro, scikit-learn, statsmodels, SQL/PostgreSQL.
+        
+    \item \textbf{Legal contract intelligence (LLM + RAG).} Built a retrieval-grounded contract QA + clause-editing workflow for compliance, combining automatic suggestions with human-in-the-loop review.
+    \item Implemented element-level clause patches with automatic re-evaluation to support iterative edits; deployed to production and adopted by \textbf{3 legal teams} (\textbf{50+ users}).
+    \item \textit{Stack:} Python, FastAPI, Azure, PostgreSQL/pgvector, Pydantic, LLM embeddings, OpenAI API, Datadog.
+    
+
+\end{itemize}
+    \item[]
+    \resumeSubheading
+        {Saint-Gobain}{Paris-La D\'efense}
+        {Industrial PhD Researcher (Causal Inference / ML)}{09/2021 -- 12/2024}
+
+    \begin{itemize}
+        \item Industrial PhD on causal inference and sequential decisioning for commercial targeting on longitudinal customer data; resulted in publications at \textbf{NeurIPS} and \textbf{TMLR} and a workshop poster at \textbf{UAI} (see Publications).
+        \item \textbf{Uplift / ITE.} Built causal uplift pipelines for engagement outcomes across \textbf{100+ campaigns}; developed neural embeddings for a \textbf{100K+}-dimensional customer panel, reducing processing time by \textbf{25\%}.
+        \item \textbf{Sequential decision optimization.} Designed a sequential causal policy-learning framework to recommend multi-week action sequences using counterfactual outcome trajectories; transferred personalized recommendations to \textbf{100+ sales engineers} via decision-support tooling.
+        \item \textbf{Causal representation learning.} Learned time-varying embeddings from longitudinal purchases (\textbf{1M+ transactions}) to capture evolving customer state and heterogeneity; packaged artifacts for reuse in segmentation and forecasting.
+        \item \textit{Selected tools:} PyTorch/Lightning, EconML/DoubleML, MLflow, Hydra, Optuna.
+    \end{itemize}
+
+    \item[]
+\resumeSubheading
+    {Saint-Gobain}{Paris-La D\'efense}
+    {Data Scientist (Segmentation \& Targeting)}{04/2021 -- 08/2021}
+\begin{itemize}
+  \item Shipped a production segmentation + targeting pipeline; increased click-through rate by \textbf{40\%} and reduced clustering runtime by \textbf{10$\times$} vs the previous production baseline.
+  \item Developed unsupervised feature selection for purchase-history signals using Laplacian Score; learned UMAP embeddings for high-cardinality categorical variables to mitigate the dominance of one-hot features in distance-based clustering.
+  \item Designed a scalable two-stage clustering procedure: BIRCH for large-scale discovery with a custom model-selection objective (silhouette + business size constraints), followed by agglomerative consolidation of micro-clusters; applied adaptive scaling to stabilize heterogeneous feature ranges.
+  \item Built campaign-specific cluster ranking via recent purchase-density estimation (KDE) and quantified temporal stability by comparing predicted cluster ordering to next-period realized purchase densities.
+  \item \textit{Stack:} Python, scikit-learn, pandas, NumPy, UMAP, SQL, Joblib.
+\end{itemize}
+
+
+
+    \item[]
+\resumeSubheading
+    {EDF Lab}{Paris-Saclay}
+    {Research Intern (Time Series Representation Learning)}{05/2020 -- 11/2020}
+\begin{itemize}
+  \item Built a benchmark for classifying domestic hot-water (ECS) / heating usage from long-horizon smart-meter load curves (30-min sampling; missing timestamps handled via NaN-aware preprocessing + windowing); evaluated across seasonal splits (winter/summer) and window lengths (1W vs 2W).
+  \item Implemented and compared modern deep time-series models (ResNet, InceptionTime, causal dilated ConvNets, ConvLSTM) and unsupervised representations (CAE/LSTM-AE/VAE + pseudo-label self-supervision); matched end-to-end ConvLSTM accuracy with CAE representations + shallow classifier while cutting training time \(\sim 30\times\), and pushed accuracy to \(94\%\!+\) via ensembling + datetime features.
+  \item \textit{Stack:} Pytorch, Tensorflow, scikit-learn.
+\end{itemize}
+
+
+    \item[]
+    \resumeSubheading
+    {L'Or\'eal Paris}{Paris}
+    {Research Intern (Time Series Analytics \& Forecasting)}{10/2019 -- 03/2020}
+\begin{itemize}
+  \item Modeled goods$\rightarrow$tester transformations as store/city time series; analyzed out-of-stock drivers via dependence tests (Cram\'er's $V$) and seasonality diagnostics.
+  \item Engineered compact time-series descriptors (variability/peaks/approx.\ entropy) and benchmarked clustering (k-means++, GMM, spectral, agglomerative) to identify store archetypes.
+  \item Proposed stochastic time-warp augmentation (cubic-spline time distortion) to synthesize realistic trajectories while preserving cluster structure.
+  \item Built ARMA/ARIMA + LSTM forecasting baselines with AIC-based selection and residual checks (Ljung--Box); introduced a cost-sensitive loss for over/under-production trade-offs.
+  \item \textit{Stack:} Pytorch, scikit-learn, statsmodels, tsfresh.
+\end{itemize}
+\end{itemize}
+
+%----------EDUCATION----------
+\section{Education}\vspace{-2pt}
+
+\resumeSubheading
+    {Paris-Saclay University}{Paris-Saclay, France}
+    {Ph.D. in Applied Mathematics (defended Nov.\ 2025)}{09/2021 -- 11/2025}
+\vspace{-6pt}
+\begin{itemize}[leftmargin=15pt, itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt]
+    \item Dissertation: \textit{Learning causality for longitudinal data} (\href{https://arxiv.org/abs/2512.04980}{link}).
+\end{itemize}
+\vspace{-6pt}
+
+\resumeSubheading
+    {CentraleSup\'elec \& Centrale Casablanca}{Paris \& Casablanca}
+    {Engineering/Master's degree in Applied Mathematics}{09/2017 -- 11/2021}
+\vspace{-6pt}
+\begin{itemize}[leftmargin=15pt, itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt]
+    \item Major: applied mathematics for data science (research track).
+\end{itemize}
+\vspace{-4pt}
+
+
+\end{document}
+
