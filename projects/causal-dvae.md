@@ -17,7 +17,7 @@ The **Causal Dynamic Variational Autoencoder (CDVAE)** is designed to infer unob
 ## Technical Breakdown
 
 ### 1. Latent-Variable Identifiability
-A core contribution of this work is proving the **identifiability** of the latent causal factors under temporal structure. We leverage the dynamics of the outcome sequence to disentangle the time-varying latent state from static subject-specific heterogeneity.
+A core contribution of this work is proving the **identifiability** of the latent causal factors driving outcome sequences. We provide formal identifiability results under temporal structure, leveraging the dynamics to disentangle the time-varying latent state from static subject-specific heterogeneity.
 
 ### 2. Architecture: Recurrent Variational Inference
 - **Encoder**: A bidirectional LSTM-based inference network that maps historical outcomes and treatments to a latent distribution.
@@ -25,7 +25,7 @@ A core contribution of this work is proving the **identifiability** of the laten
 - **Probabilistic Calibration**: Uses Importance Weighted Autoencoders (IWAE) to improve the tightness of the ELBO in sequential settings.
 
 ### 3. Generalization Bounds for ITE
-We established the first generalization bounds for Individual Treatment Effect (ITE) estimation in the context of dynamic latent-variable models, providing a theoretical foundation for the stability of CDVAE forecasts.
+We established the first **generalization guarantees** for Individual Treatment Effect (ITE) estimation in the context of dynamic latent-variable models, providing a theoretical foundation for the stability of CDVAE forecasts across heterogeneous populations.
 
 ## Key Outcomes
 

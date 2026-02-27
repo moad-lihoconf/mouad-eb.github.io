@@ -17,19 +17,19 @@ Moving beyond simple binary classification, this project aims to produce **calib
 ## Technical Approach
 
 ### 1. Intensity-Based Risk Modeling
-Instead of standard classification, I built an end-to-end failure-risk pipeline using **Poisson/Cox-style event intensities**.
-- **Hazard Modeling**: Trained in **Pyro** (Variational Inference) to handle asset-day exposure and censoring-aware at-risk datasets.
+Instead of standard classification, I built an end-to-end failure-risk pipeline using **Poisson/Cox-style event intensities** on asset-day exposure to produce calibrated failure probabilities.
+- **Hazard Modeling**: Trained in **Pyro** (Variational Inference) to handle asset-day exposure and a leakage-safe, censoring-aware at-risk dataset.
 - **Calibration**: Focused on achieving high Brier scores to ensure probabilities represent real-world risk, enabling meaningful prioritization for maintenance teams.
 
 ### 2. Hierarchical Root-Cause Analysis (RCA)
-Localization of failure drivers is performed through mixed-effects modeling:
-- **Spatial Hierarchy**: Quantifying risk heterogeneity across Planet $\rightarrow$ Line $\rightarrow$ Workcenter $\rightarrow$ Equipment levels.
+Developed sensor-driven root-cause analysis to localize failure drivers and heterogeneity across plant, line, workcenter, and equipment:
+- **Spatial Hierarchy**: Quantifying risk heterogeneity across Planet $\rightarrow$ Line $\rightarrow$ Workcenter $\rightarrow$ Equipment levels using **mixed effects modeling**.
 - **Sensor Attribution**: Driven by sensor-stream covariate attribution to identify anomalous drifts before breakdown.
 
 ### 3. Data Engineering & Lineage
-Harmonized machine stops, scrap KPIs, work orders, and high-frequency sensor streams.
-- **Matching**: Achieved **98% entity matching** across heterogeneous data warehouses.
-- **Validation**: Automated lineage and automated QA to ensure "leakage-safe" training sets.
+Harmonized machine stops, scrap KPIs, work orders, and high-frequency sensor streams across multiple warehouses.
+- **Matching**: Achieved **98% entity matching** across heterogeneous data sources with automated QA/lineage.
+- **Verification**: Built a validated RCA dataset across 3 sites and 5 lines.
 
 ## Results
 
@@ -41,5 +41,5 @@ Harmonized machine stops, scrap KPIs, work orders, and high-frequency sensor str
 
 ## Technical Stack
 - **Modeling**: Python, PyTorch/Pyro, scikit-learn, statsmodels
-- **Data**: SQL (PostgreSQL), Snowflake, DuckDB
+- **Data**: SQL (PostgreSQL/pgvector), Snowflake, DuckDB
 - **Automation**: MLflow for experiment tracking and model registry

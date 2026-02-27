@@ -19,13 +19,13 @@ The goal is to identify pairs of assets that exhibit a stable cointegration rela
 ### 1. Robust Pair Selection
 To mitigate data-mining risk, I implemented a multi-stage screening process:
 - **Liquidity Filtering**: Ensuring assets meet minimum volume thresholds.
-- **Cointegration Testing**: Using Johansen and Engle-Granger tests with multiple-testing control (Benjamini-Hochberg).
+- **Cointegration Testing**: Using **Johansen** and Engle-Granger tests with multiple-testing control (**Benjamini-Hochberg**).
 - **Stability Screening**: Out-of-sample verification of half-life stability and hedge-ratio persistence.
 
 ### 2. Spread Modeling (Ornstein-Uhlenbeck)
 The spread $X_t$ is modeled as a mean-reverting OU process:
 $$dX_t = \theta(\mu - X_t)dt + \sigma dW_t$$
-- **Hedge Ratio Estimation**: Calculated via Total Least Squares (TLS) to account for errors in both variables.
+- **Hedge Ratio Estimation**: Calculated via **Total Least Squares (TLS)** to account for errors in both variables.
 - **Signal Generation**: Entry/exit thresholds derived from the equilibrium mean $\mu$ and stationary variance.
 
 ### 3. Portfolio Construction
