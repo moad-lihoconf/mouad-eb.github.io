@@ -34,7 +34,7 @@ Currently, I work as a Senior Data Scientist at Saint-Gobain, building productio
 - [Blog]({{ '/blog/' | relative_url }})
 - [Google Scholar](https://scholar.google.com/citations?hl=fr&user=yH0gpPoAAAAJ)
 - [LinkedIn](https://www.linkedin.com/in/mouad-elbouchattaoui/)
-- [GitHub](https://github.com/mouad-eb)
+- [GitHub](https://github.com/moad-lihoconf)
 
 ---
 

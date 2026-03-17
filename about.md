@@ -35,4 +35,4 @@ Before my PhD, I studied applied mathematics at **CentraleSupélec** and **Centr
 - **Research Hub: [Publications & Talks]({{ '/research/' | relative_url }})**
 - **Detailed Toolkit: [Skills]({{ '/skills/' | relative_url }})**
 - **Email**: [mouad.elbouchattaoui@gmail.com](mailto:mouad.elbouchattaoui@gmail.com)
-- **Profiles**: [LinkedIn](https://www.linkedin.com/in/mouad-elbouchattaoui/) · [GitHub](https://github.com/mouad-eb) · [Scholar](https://scholar.google.com/citations?hl=fr&user=yH0gpPoAAAAJ)
+- **Profiles**: [LinkedIn](https://www.linkedin.com/in/mouad-elbouchattaoui/) · [GitHub](https://github.com/moad-lihoconf) · [Scholar](https://scholar.google.com/citations?hl=fr&user=yH0gpPoAAAAJ)
