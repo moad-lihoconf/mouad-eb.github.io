@@ -2,14 +2,10 @@
 layout: default
 ---
 
-<article class="page">
+<article class="prose">
     {% if page.title %}
-    <header class="page-header">
-        <h1 class="page-title">{{ page.title }}</h1>
-    </header>
+    <h1>{{ page.title }}</h1>
     {% endif %}
 
-    <div class="page-content glass-card prose">
-        {{ content }}
-    </div>
+    {{ content }}
 </article>
