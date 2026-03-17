@@ -26,12 +26,12 @@ Currently, I work as a Senior Data Scientist at Saint-Gobain, building productio
 
 ## Links
 
-- [About](/about)
-- [Experience](/experience)
-- [Research](/research)
-- [Skills](/skills)
-- [Projects](/projects)
-- [Blog](/blog)
+- [About]({{ '/about/' | relative_url }})
+- [Experience]({{ '/experience/' | relative_url }})
+- [Research]({{ '/research/' | relative_url }})
+- [Skills]({{ '/skills/' | relative_url }})
+- [Projects]({{ '/projects/' | relative_url }})
+- [Blog]({{ '/blog/' | relative_url }})
 - [Google Scholar](https://scholar.google.com/citations?hl=fr&user=yH0gpPoAAAAJ)
 - [LinkedIn](https://www.linkedin.com/in/mouad-elbouchattaoui/)
 - [GitHub](https://github.com/mouad-eb)
