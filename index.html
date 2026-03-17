@@ -2,38 +2,46 @@
 layout: default
 ---
 
-<div class="intro-text">
-    <p>I'm a researcher and data scientist interested in how we can make reliable decisions from observational data. My
-        work focuses on causal inference, representation learning, and probabilistic modeling—particularly for
-        longitudinal and time-series data.</p>
-</div>
+<section class="hero">
+    <div class="hero-inner">
+        <h1 class="hero-title">Mouad El Bouchattaoui</h1>
+        <h2 class="hero-subtitle">Ph.D. in Applied Mathematics</h2>
+        <p class="hero-desc">
+            Senior Data Scientist at Saint-Gobain. Researching causal inference, representation learning, and
+            probabilistic modeling for longitudinal and time-series data.
+        </p>
 
-<p>I completed my PhD at Paris-Saclay University, where I developed methods for counterfactual regression and
-    treatment-effect estimation over time. Currently, I work as a Senior Data Scientist at Saint-Gobain.</p>
+        <div class="hero-buttons">
+            <a href="{{ '/research/' | relative_url }}" class="btn btn-primary">Publications</a>
+            <a href="{{ '/projects/' | relative_url }}" class="btn btn-secondary">Projects</a>
+        </div>
+    </div>
+</section>
 
-<hr>
+<section class="section-block alt-bg">
+    <div class="section-inner">
+        <h2 class="section-title">Selected Publications</h2>
 
-<h2 id="publications">Selected Publications</h2>
+        <div class="cards-grid">
+            <a href="https://openreview.net/forum?id=bKOZYBJE4Z" target="_blank" class="resource-card">
+                <div class="card-meta">NeurIPS 2024</div>
+                <h3 class="card-title">Causal Contrastive Learning for Counterfactual Regression Over Time</h3>
+                <p class="card-desc">Addressing long-term dependencies and longitudinal selection bias through
+                    contrastive information-theoretic regularization.</p>
+            </a>
 
-<ul class="pub-list">
-    <li class="pub-item">
-        <h3 class="pub-title"><a href="https://openreview.net/forum?id=bKOZYBJE4Z" target="_blank">Causal Contrastive
-                Learning for Counterfactual Regression Over Time</a></h3>
-        <p class="pub-meta"><strong>NeurIPS 2024</strong><br> Addressing long-term dependencies and longitudinal
-            selection bias through contrastive information-theoretic regularization.</p>
-    </li>
+            <a href="https://openreview.net/forum?id=atf9q49DeF" target="_blank" class="resource-card">
+                <div class="card-meta">TMLR 2025</div>
+                <h3 class="card-title">Causal Dynamic Variational Autoencoder</h3>
+                <p class="card-desc">Inferring unobserved risk factors from outcome sequences for longitudinal
+                    individual treatment effect estimation.</p>
+            </a>
 
-    <li class="pub-item">
-        <h3 class="pub-title"><a href="https://openreview.net/forum?id=atf9q49DeF" target="_blank">Causal Dynamic
-                Variational Autoencoder</a></h3>
-        <p class="pub-meta"><strong>TMLR 2025</strong><br> Inferring unobserved risk factors from outcome sequences for
-            longitudinal individual treatment effect estimation.</p>
-    </li>
-
-    <li class="pub-item">
-        <h3 class="pub-title"><a href="https://openreview.net/forum?id=dXwT6Dyo6z" target="_blank">Toward a More
-                Transparent Causal Representation Learning</a></h3>
-        <p class="pub-meta"><strong>UAI 2024</strong><br> Exploring indentifiability in high-dimensional causal modeling
-            tasks.</p>
-    </li>
-</ul>
+            <a href="https://openreview.net/forum?id=dXwT6Dyo6z" target="_blank" class="resource-card">
+                <div class="card-meta">UAI 2024</div>
+                <h3 class="card-title">Toward a More Transparent Causal Representation Learning</h3>
+                <p class="card-desc">Exploring indentifiability in high-dimensional causal modeling tasks.</p>
+            </a>
+        </div>
+    </div>
+</section>

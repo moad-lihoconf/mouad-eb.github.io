@@ -7,40 +7,40 @@
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <!-- Classical academic typography -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet">
 </head>
 
 <body>
-  <div class="wrapper">
-    <aside class="sidebar">
-      <div class="profile">
-        <h1 class="name"><a href="{{ '/' | relative_url }}">Mouad El Bouchattaoui</a></h1>
-        <p class="title">Ph.D. in Applied Mathematics<br>Senior Data Scientist</p>
-      </div>
+  <div class="header-wrapper">
+    <header class="header-container">
+      <a href="{{ '/' | relative_url }}" class="nav-logo">Mouad El Bouchattaoui</a>
 
-      <nav class="nav-menu">
-        <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
-        <a href="{{ '/about/' | relative_url }}" class="nav-link">About</a>
-        <a href="{{ '/experience/' | relative_url }}" class="nav-link">Experience</a>
-        <a href="{{ '/research/' | relative_url }}" class="nav-link">Research</a>
-        <a href="{{ '/projects/' | relative_url }}" class="nav-link">Projects</a>
-        <a href="{{ '/skills/' | relative_url }}" class="nav-link">Skills</a>
-        <a href="{{ '/blog/' | relative_url }}" class="nav-link">Blog</a>
+      <nav class="nav-links">
+        <a href="{{ '/about/' | relative_url }}" class="nav-item">About</a>
+        <a href="{{ '/experience/' | relative_url }}" class="nav-item">Experience</a>
+        <a href="{{ '/research/' | relative_url }}" class="nav-item">Research</a>
+        <a href="{{ '/projects/' | relative_url }}" class="nav-item">Projects</a>
+        <a href="{{ '/skills/' | relative_url }}" class="nav-item">Skills</a>
+        <a href="{{ '/blog/' | relative_url }}" class="nav-item">Blog</a>
       </nav>
+    </header>
+  </div>
 
-      <div class="social-links">
-        <a href="https://github.com/moad-lihoconf" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/mouad-elbouchattaoui/" target="_blank">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?hl=fr&amp;user=yH0gpPoAAAAJ" target="_blank">Scholar</a>
-      </div>
-    </aside>
-
-    <main class="content">
+  <main class="main-content">
+    {% if page.url == '/' %}
+    {{ content }}
+    {% else %}
+    <div class="page-container">
       {{ content }}
-    </main>
+    </div>
+    {% endif %}
+  </main>
+
+  <div class="footer-wrapper">
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2026 Mouad El Bouchattaoui</p>
+      </div>
+    </footer>
   </div>
 </body>
 
