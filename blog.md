@@ -4,16 +4,21 @@ title: Blog
 permalink: /blog/
 ---
 
-# Blog
+<div class="page-container">
 
-Here you can find my latest articles and updates.
+  <h1 class="prose-page-title">Blog</h1>
+  <p class="prose-page-subtitle">Articles and technical notes on causal inference, probabilistic modeling, and applied ML.</p>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <p>{{ post.date | date: "%B %-d, %Y" }}</p>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
+  <div class="cards-grid" style="margin-top: 2rem;">
+    {% for post in site.posts %}
+    <a href="{{ post.url | relative_url }}" class="resource-card">
+      <div class="card-meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+      <h2 class="card-title">{{ post.title }}</h2>
+      {% if post.excerpt %}
+      <p class="card-desc">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </div>
+
+</div>
