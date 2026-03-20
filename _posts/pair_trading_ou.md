@@ -22,7 +22,7 @@ featured: false
 
 Pairs trading is one of the most classical ideas in quantitative finance: find two assets that move together, wait for their relationship to diverge, and position for reversion. In its textbook form, the trade is elegant. In practice, however, many real portfolios cannot implement that textbook version directly.
 
-The reason is simple: the canonical formulation assumes you can go long one asset and short the other, with few portfolio-level constraints. But many institutional mandates are **long-only**, benchmark-relative, capped at the name level, and tightly monitored for unintended factor exposures. In that world, “buy stock \(i\), short stock \(j\)” is no longer a primitive action. It becomes an **implementation problem**.
+The reason is simple: the canonical formulation assumes you can go long one asset and short the other, with few portfolio-level constraints. But many institutional mandates are **long-only**, benchmark-relative, capped at the name level, and tightly monitored for unintended factor exposures. In that world, “buy stock $i$, short stock $j$” is no longer a primitive action. It becomes an **implementation problem**.
 
 This personal project started from that tension. I wanted to ask a more practical question:
 
@@ -51,21 +51,21 @@ That shift sounds small, but it changes the entire problem.
 
 ## The intuition: from clean theory to implementable portfolios
 
-The ideal statistical trade is easy to write down. If two stocks \(i\) and \(j\) have a residual relationship that mean-reverts, then one can define a spread such as
+The ideal statistical trade is easy to write down. If two stocks $i$ and $j$ have a residual relationship that mean-reverts, then one can define a spread such as
 
-\[
+$$
 S^{\mathrm{stat}}_{i,j}(t) = \tilde r_i(t) - \beta_{ij}^{\tilde r}\, \tilde r_j(t),
-\]
+$$
 
-where \(\tilde r_i(t)\) and \(\tilde r_j(t)\) are factor-cleaned returns, and \(\beta_{ij}^{\tilde r}\) is a hedge ratio estimated from a training window.
+where $\tilde r_i(t)$ and $\tilde r_j(t)$ are factor-cleaned returns, and $\beta_{ij}^{\tilde r}$ is a hedge ratio estimated from a training window.
 
 If this spread behaves like a stationary or mean-reverting process, it becomes a candidate trading signal.
 
-But an institutional portfolio manager often cannot literally implement “\(+1\) unit of \(i\), \(-\beta\) units of \(j\).” They start from a **benchmark** \(\mathbf b\) and are only allowed to create **active deviations** \(\mathbf a\) such that the final portfolio remains long-only:
+But an institutional portfolio manager often cannot literally implement “$+1$ unit of $i$, $-\beta$ units of $j$.” They start from a **benchmark** $\mathbf b$ and are only allowed to create **active deviations** $\mathbf a$ such that the final portfolio remains long-only:
 
-\[
+$$
 \mathbf w = \mathbf b + \mathbf a, \qquad \sum_k a_k = 0, \qquad \mathbf w \ge 0.
-\]
+$$
 
 So the real problem becomes this:
 
@@ -79,17 +79,17 @@ That is the heart of the project.
 
 A raw price or return spread can look attractive simply because both assets share exposure to the same broad drivers: market, sector, size, value, momentum, or macro shocks. I therefore start with a residualization step.
 
-For each stock \(k\), I fit a linear factor model on a rolling training window:
+For each stock $k$, I fit a linear factor model on a rolling training window:
 
-\[
+$$
 r_k(t)=\alpha_k + {\beta^{r,f}_k}^\top \mathbf f_t+\varepsilon_k(t),
-\]
+$$
 
 and define the residual return
 
-\[
+$$
 \tilde r_k(t)=r_k(t)-\widehat\alpha_k-(\widehat\beta_k^{r,f})^\top \mathbf f_t.
-\]
+$$
 
 This is conceptually important. The goal is not to trade raw co-movement. The goal is to trade **idiosyncratic relative dislocation**, after accounting for common factors.
 
@@ -105,16 +105,16 @@ That immediately makes the project more robust and more interpretable:
 
 Within a universe of candidate names, ideally inside a common sector or sub-industry, I construct candidate pairs and estimate a hedge ratio on residualized returns:
 
-\[
+$$
 \beta_{ij}^{\tilde r} = \arg\min_{\beta\in\mathbb R}\sum_{t\in W_{\mathrm{train}}}
 \big(\tilde r_i(t) - \beta\,\tilde r_j(t)\big)^2.
-\]
+$$
 
 This gives the statistical spread
 
-\[
+$$
 S^{\mathrm{stat}}_{i,j}(t)=\tilde r_i(t) - \beta_{ij}^{\tilde r}\, \tilde r_j(t).
-\]
+$$
 
 I deliberately moved away from the common habit of using correlation as the main selection tool. Correlation can help rank candidates, but it does not answer the real question: **does the residual relationship revert in a stable and tradable way?**
 
@@ -126,15 +126,15 @@ So I treat mean reversion as the real gate.
 
 A spread is only useful if its reversion behavior is stable enough to trade. To formalize that, I model the spread as an AR(1) process,
 
-\[
+$$
 X_t = \mu + \phi (X_{t-1} - \mu) + \eta_t,
-\]
+$$
 
 and compute the implied half-life
 
-\[
+$$
 t_{1/2} = -\frac{\log 2}{\log |\phi|}, \qquad 0<|\phi|<1.
-\]
+$$
 
 The half-life gives a useful operational interpretation: how long does it take for a deviation to shrink by half? This lets me reject two opposite pathologies:
 
@@ -151,33 +151,33 @@ In other words, I am trying to build a pair-selection system that treats **tempo
 
 This is the part of the project that I find most interesting.
 
-Instead of implementing an abstract long-short spread, I define a benchmark portfolio \(\mathbf b\) and an active weight vector \(\mathbf a\), with
+Instead of implementing an abstract long-short spread, I define a benchmark portfolio $\mathbf b$ and an active weight vector $\mathbf a$, with
 
-\[
+$$
 \mathbf w = \mathbf b + \mathbf a,
 \qquad
 \sum_i a_i = 0.
-\]
+$$
 
 The active return is then
 
-\[
+$$
 S^{\mathrm{act}}(t) = \mathbf a^\top \mathbf r(t),
-\]
+$$
 
 and the residualized active spread becomes
 
-\[
+$$
 \tilde S^{\mathrm{act}}(t) = \mathbf a^\top \tilde{\mathbf r}(t).
-\]
+$$
 
-This makes the implementation target explicit: I want \(\tilde S^{\mathrm{act}}\) to behave as closely as possible to the ideal statistical spread \(S^{\mathrm{stat}}_{i,j}\).
+This makes the implementation target explicit: I want $\tilde S^{\mathrm{act}}$ to behave as closely as possible to the ideal statistical spread $S^{\mathrm{stat}}_{i,j}$.
 
 To measure the gap, I define the implementation error
 
-\[
+$$
 E_{i,j}(t) := \tilde S^{\mathrm{act}}(t) - S^{\mathrm{stat}}_{i,j}(t).
-\]
+$$
 
 This quantity is extremely useful because it turns a vague practical concern into a mathematical object. It lets me ask principled questions such as:
 
@@ -191,19 +191,19 @@ That is one of the conceptual contributions of the project: **treating implement
 
 ## Step 5 — Introduce purity as a practical long-only concept
 
-A classical pair trade says: fund the overweight in asset \(i\) by underweighting asset \(j\). In long-only reality, that is not always fully possible. The benchmark may hold little of \(j\), the caps may be tight, or factor constraints may force part of the funding to come from other names.
+A classical pair trade says: fund the overweight in asset $i$ by underweighting asset $j$. In long-only reality, that is not always fully possible. The benchmark may hold little of $j$, the caps may be tight, or factor constraints may force part of the funding to come from other names.
 
 To capture that, I introduce a notion of **pair purity**.
 
-Suppose I want to overweight asset \(i\) by at least \(\Delta\) and underweight asset \(j\) by at least \(\Delta\). Then an active tilt implements the pair *purely* at level \(p_\star\) if at least a fraction \(p_\star\) of the requested overweight is directly funded by reducing \(j\):
+Suppose I want to overweight asset $i$ by at least $\Delta$ and underweight asset $j$ by at least $\Delta$. Then an active tilt implements the pair *purely* at level $p_\star$ if at least a fraction $p_\star$ of the requested overweight is directly funded by reducing $j$:
 
-\[
+$$
 a_i \ge \Delta,
 \qquad
 \frac{-a_j}{\Delta} \ge p_\star,
 \qquad
 w_j=b_j+a_j>0.
-\]
+$$
 
 This is a simple idea, but it gives a very clean way to reason about the tension between statistical intent and portfolio constraints.
 
@@ -225,7 +225,7 @@ The optimization objective balances two goals:
 
 The formulation is
 
-\[
+$$
 \begin{aligned}
 \min_{\mathbf a\in\mathbb R^{|U|}} \quad &
 \|\widehat{\mathbf B}\,\mathbf a\|_2^2 + \rho \|\mathbf a\|_2^2 \\
@@ -235,7 +235,7 @@ The formulation is
 & a_i \ge \Delta,\quad a_j \le -\Delta, \\
 & \|\mathbf a\|_1 \le A_{\max}.
 \end{aligned}
-\]
+$$
 
 This formulation is attractive for several reasons.
 
@@ -259,16 +259,16 @@ That separation between *signal validity* and *implementation feasibility* is ce
 
 One of the optional ideas in the project is a **proxy-short** mechanism.
 
-If a direct underweight in asset \(j\) is not feasible enough, one can try to approximate the negative return of \(j\) using a nonnegative combination of other tradable instruments, such as sector ETFs, peers, or basis assets. Formally, I solve a nonnegative sparse regression problem of the form
+If a direct underweight in asset $j$ is not feasible enough, one can try to approximate the negative return of $j$ using a nonnegative combination of other tradable instruments, such as sector ETFs, peers, or basis assets. Formally, I solve a nonnegative sparse regression problem of the form
 
-\[
+$$
 \min_{\mathbf h_j\ge 0}
 \|\mathbf Z\mathbf h_j-\mathbf y_j\|_2^2 + \lambda\|\mathbf h_j\|_1,
-\]
+$$
 
-where \(\mathbf y_j\) is the time series of \(-r_j\) and \(\mathbf Z\) stacks the returns of the basis instruments.
+where $\mathbf y_j$ is the time series of $-r_j$ and $\mathbf Z$ stacks the returns of the basis instruments.
 
-Geometrically, this asks whether the negative-return series of \(j\) lies close to the **long-only cone** spanned by a basis set.
+Geometrically, this asks whether the negative-return series of $j$ lies close to the **long-only cone** spanned by a basis set.
 
 I like this part because it reframes a financial constraint in a very clean geometric way. The question is no longer “can I short this stock?” but rather:
 
@@ -383,38 +383,38 @@ That, to me, is what makes it worth studying.
 A few of the key mathematical objects used in the project are:
 
 - **factor model**
-  \[
+  $$
   r_k(t)=\alpha_k + {\beta^{r,f}_k}^\top \mathbf f_t+\varepsilon_k(t),
-  \]
+  $$
 
 - **residualized return**
-  \[
+  $$
   \tilde r_k(t)=r_k(t)-\widehat\alpha_k-(\widehat\beta_k^{r,f})^\top \mathbf f_t,
-  \]
+  $$
 
 - **statistical spread**
-  \[
+  $$
   S^{\mathrm{stat}}_{i,j}(t)=\tilde r_i(t) - \beta_{ij}^{\tilde r}\, \tilde r_j(t),
-  \]
+  $$
 
 - **implemented active spread**
-  \[
+  $$
   \tilde S^{\mathrm{act}}(t)=\mathbf a^\top \tilde{\mathbf r}(t),
-  \]
+  $$
 
 - **implementation error**
-  \[
+  $$
   E_{i,j}(t)=\tilde S^{\mathrm{act}}(t)-S^{\mathrm{stat}}_{i,j}(t),
-  \]
+  $$
 
 - **AR(1) mean-reversion model**
-  \[
+  $$
   X_t = \mu + \phi (X_{t-1} - \mu) + \eta_t,
-  \]
+  $$
 
 - **half-life**
-  \[
+  $$
   t_{1/2} = -\frac{\log 2}{\log |\phi|}.
-  \]
+  $$
 
 These ingredients are all discussed in much more detail in my project notes, where I also sketch theoretical claims around implementation error control, out-of-sample stability, and selection gates.
