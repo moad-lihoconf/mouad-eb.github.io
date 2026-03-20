@@ -2,6 +2,7 @@
 layout: post
 title: "Bayesian Predictive Maintenance with Pyro"
 date: 2025-01-03
+permalink: /blog/bayesian-maintenance/
 categories: [industry, bayesian]
 tags: [Bayesian, Pyro, predictive-maintenance, calibration]
 ---

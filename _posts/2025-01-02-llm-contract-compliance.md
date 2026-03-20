@@ -2,6 +2,7 @@
 layout: post
 title: "LLM-Based Contract Compliance System"
 date: 2025-01-02
+permalink: /blog/llm-contract-compliance/
 categories: [industry, llm]
 tags: [LLM, RAG, pgvector, FastAPI]
 ---
