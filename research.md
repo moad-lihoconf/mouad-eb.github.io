@@ -82,6 +82,18 @@ permalink: /research/
   </div>
 
   <div class="cv-section">
+    <h2>Academic Service</h2>
+    <div class="cv-card">
+      <span class="title">Technical Program Committee / Reviewer</span>
+      <ul>
+        <li><strong>ICML 2026</strong></li>
+        <li><strong>NeurIPS 2025</strong></li>
+        <li><strong>UAI 2025</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cv-section">
     <h2>Mentorship</h2>
     <div class="cv-card">
       <span class="title">Research Internship Mentor</span>
