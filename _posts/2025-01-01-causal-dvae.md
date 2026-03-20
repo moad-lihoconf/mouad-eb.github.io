@@ -341,7 +341,3 @@ I see this project as part of a broader research direction: building causal ML m
 - **Venue:** Transactions on Machine Learning Research (TMLR), 2025
 
 ---
-
-## Suggested short version for project cards
-
-**CDVAE** is a longitudinal causal inference model that learns latent substitutes for unobserved static adjustment variables—hidden baseline factors that shape outcome trajectories and treatment-effect heterogeneity without affecting treatment assignment. It combines a dynamic VAE, causal weighting, latent clustering, and a near-deterministic inference regime, and achieves strong gains over state-of-the-art baselines on synthetic and MIMIC-III benchmarks.

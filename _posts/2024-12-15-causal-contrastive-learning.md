@@ -259,7 +259,3 @@ I see this project as a step toward a broader research direction: building causa
 - **Seminar talk:** Causal Club, University of Pisa, March 2025
 
 ---
-
-## Suggested short version for project cards
-
-**Causal CPC** is a recurrent method for long-horizon counterfactual forecasting under time-varying confounding. It combines Contrastive Predictive Coding, InfoMax regularization, and mutual-information-based balancing to learn historical representations that are predictive, reconstructable, and less treatment-biased. The model achieves strong results on synthetic and MIMIC-III benchmarks while remaining more efficient than transformer-based alternatives.

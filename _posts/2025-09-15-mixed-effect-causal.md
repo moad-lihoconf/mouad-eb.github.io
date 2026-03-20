@@ -405,8 +405,4 @@ That move created a conceptual bridge from classical mixed-effects thinking to c
 - **Talk:** *A Non-Linear Mixed Effect Model for the Estimation of Causal Effects Through Time* (Journées de Statistique, 2023)
 - **Talk:** *Random Effects in Longitudinal Data from the Perspective of Causal Inference* (Fondements Mathématiques de l’IA, 2024)
 
----
 
-## Suggested short version for project cards
-
-A research project on reinterpreting **random effects** in longitudinal models as latent **causal adjustment variables** and **effect modifiers**. The work connects mixed-effects modeling, sequential causal inference, and variational latent-variable learning to improve individualized treatment-effect estimation when important stable sources of heterogeneity are not observed.

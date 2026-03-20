@@ -407,9 +407,3 @@ I see this work as part of a broader research direction: building representation
 - **Project:** *Toward Transparent Causal Representation Learning*
 - **Format:** research talk / work in progress
 - **Presentation:** March 2025 seminar slides
-
----
-
-## Suggested short version for project cards
-
-**Toward Transparent Causal Representation Learning** proposes a way to connect learned latent causal factors back to meaningful groups of observed variables in high-dimensional temporal data. The idea is to regularize the decoder Jacobian with a sparse self-expressiveness penalty, then cluster observed features through subspace geometry and spectral clustering. The result is a more transparent view of what a CRL model has learned, especially for tabular longitudinal data where visual inspection is not possible.
