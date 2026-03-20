@@ -4,56 +4,55 @@ title: Skills
 permalink: /skills/
 ---
 
-# Technical & Quantitative Toolkit
+# Technical & Scientific Profile
 
-## Core Languages
-
-- **Python** — Primary language for DL, causal inference, and backend development.
-- **SQL** — Complex queries, window functions, and data pipelines (PostgreSQL, Snowflake).
-- **R** — Statistical modeling and visualization.
+My expertise bridges the gap between **high-dimensional statistical theory** and **production-grade AI systems**. I specialize in making stable, evidence-grounded decisions from longitudinal and sequential data.
 
 ---
 
-## Machine Learning & Causal Inference
+## 🔬 Research, Causal AI & Probabilistic Modeling
+*The core focus of my Ph.D. and high-stakes decision support systems.*
 
-| Category | Tools & Frameworks |
-|----------|-------|
-| **Deep Learning** | PyTorch, PyTorch Lightning, TensorFlow |
-| **Probabilistic** | Pyro (Variational Inference, MCMC, Hierarchical Models) |
-| **Classical ML** | scikit-learn, SciPy, statsmodels, tsfresh |
-| **Causal Inference** | EconML, DoWhy, DoubleML, CausalML |
-| **Data Viz** | Matplotlib, Seaborn, Plotly, UMAP/t-SNE |
-
----
-
-## Quantitative & Stochastic Modeling
-
-- **Stochastic Processes**: Markov Chains, State-Space Models, Mean-Reverting Dynamics (OU).
-- **Time-Series**: Autoregressive models (ARIMA), Regime-Switching, Latent-State Sequence Models.
-- **Statistical Inference**: Empirical Bayes, Conditional Exponential Families, Mixed-Effect Models.
-- **Optimization**: Bayesian Optimization (Optuna), Gradient-based methods.
+- **Causal Modeling**: Treatment-effect and counterfactual prediction, Causal graph learning (discovery), Identification in latent-variable models, **Offline policy learning**.
+- **Probabilistic Modeling**: Variational Inference (**VAE/IWAE**), Bayesian Hierarchical Models, **Empirical Bayes**, Conditional exponential-family models.
+- **Event-Time & Survival**: Point processes, Intensity-based hazard modeling (Cox/Poisson), Reliability modeling, **Survival analysis**.
+- **Experimentation**: A/B testing, Sequential decision-making frameworks, Causal uplift modeling.
+- **Tools**: **Pyro**, **DoWay**, **EconML**, **CausalML**, **PyTorch Lightning**.
 
 ---
 
-## Data Engineering & Systems
+## 🤖 Modern AI, LLMs & Sequential Data
+*Deep representation learning and generative systems for industrial applications.*
 
-- **Databases**: PostgreSQL (+ pgvector for embeddings), Snowflake, DuckDB.
-- **APIs & Deployment**: FastAPI, RESTful design, Pydantic.
-- **Vector Search**: Semantic similarity pipelines, RAG architecture.
-
----
-
-## MLOps & Reproducibility
-
-- **Experiment Tracking**: MLflow, TensorBoard.
-- **Configuration**: Hydra, OmegaConf.
-- **Infra & DevOps**: Docker, Git, CI/CD (Azure DevOps, GitHub Actions).
-- **Environment**: Poetry, Conda.
+- **Deep Learning**: Representation learning for temporal and high-dimensional data, **Self-supervised learning** (CPC, disentanglement), Multiscale/multi-resolution modeling.
+- **Generative AI & LLMs**: **RAG** (Retrieval-Augmented Generation) architectures, Prompt engineering, Decision/checklist stability protocols.
+- **Search & Retrieval**: Semantic similarity pipelines, **pgvector**, Hybrid ranking, Embedding refinement.
+- **Sequential Data**: Latent-state sequence models, **Regime-switching models**, Autoregressive models (ARIMA/State-space).
+- **Human-in-the-loop**: Designing AI systems that integrate expert feedback and provides transparent decision-support.
 
 ---
 
-## Cloud Infrastructure (Azure)
+## 📈 Mathematics & Statistical Learning
+*The foundational layer of my Applied Math Ph.D.*
 
-- **Azure Machine Learning**: Automated training pipelines, Model registry, Managed endpoints.
-- **Storage**: Blob Storage, Azure Data Lake (ADLS Gen2).
-- **DevOps**: Integrated CI/CD and project management.
+- **Stochastic Processes**: Markov Chains, Martingales, **Mean-reverting dynamics (OU)**, Random walks, Point processes.
+- **Statistical Learning Theory**: High-dimensional estimation, Regularization, **Kernel/Metric methods**, Sparse subspace clustering.
+- **Topological Data Analysis (TDA)**: Persistent Homology (**Giotto-TDA**), Random Geometric Graphs for discovery.
+- **Optimization**: Convex optimization (**CVXPY**), Bayesian Optimization (**Optuna**), Gradient-based methods.
+
+---
+
+## 🏗️ AI Engineering, MLOps & Infrastructure
+*Ensuring stability, reproducibility, and monitoring at scale.*
+
+- **Programming**: **Python** (Async/High-perf), **SQL** (Complex window functions), **R** (Statistical viz).
+- **Core Stack**: **NumPy**, **pandas**, **SciPy**, **scikit-learn**, **statsmodels**, **PyTorch**, **TensorFlow**.
+- **Data Systems**: **Snowflake**, **PostgreSQL**, **DuckDB**, **pgvector**, ADLS Gen2.
+- **MLOps & Infra**: **MLflow**, **Hydra**, **Docker**, **Git**, **Azure ML**, **OpenAI API**, **Datadog**.
+
+---
+
+## 🚀 Impact & Applications
+- **Industrial AI**: Predictive maintenance, Reliability modeling, Root-cause analysis (RCA).
+- **Behavioral Modeling**: Precision customer segmentation, High-resolution targeting, **Recommendation/Personalization**.
+- **Forecasting**: Demand and sales forecasting, Synthetic causal world-building for foundation model pretraining.
